@@ -22,3 +22,4 @@
 
 >>> sorting-aekh3mrxq-peachawee.vercel.app
  
+### แนะนำให้เปิดเล่นบนคอมครับ  ^-^ ###
