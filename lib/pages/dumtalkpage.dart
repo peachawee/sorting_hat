@@ -13,7 +13,7 @@ int? hm;
 
 class _DumTalkState extends State<DumTalk> {
 
-  var _total = TextEditingController();
+  final _total = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class _DumTalkState extends State<DumTalk> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              Text(
+              const Text(
                 'Number of students',
                 style: TextStyle(
                     color: Colors.black87,
@@ -55,10 +55,9 @@ class _DumTalkState extends State<DumTalk> {
               Material(
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.yellow[800],
-                    onPrimary: Colors.black,
-                    minimumSize: Size(45.0, 45.0),
-                    shadowColor: Color.fromARGB(255, 255, 255, 255)
+                    foregroundColor: Colors.black, backgroundColor: Colors.yellow[800],
+                    minimumSize: const Size(45.0, 45.0),
+                    shadowColor: const Color.fromARGB(255, 255, 255, 255)
                   ),
                   onPressed: () {
                     setState(() {
@@ -67,13 +66,13 @@ class _DumTalkState extends State<DumTalk> {
                       _total.clear();
                     });
                     Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => SortPage()));
-                    print("There are " + num.toString() +" new students.");
+                        builder: (context) => const SortPage()));
+                    print("There are $num new students.");
                   },
-                  child: Text('Enter',style: TextStyle(fontWeight: FontWeight.bold),),
+                  child: const Text('Enter',style: TextStyle(fontWeight: FontWeight.bold),),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 170.0,
               ),
               Padding(
@@ -88,15 +87,15 @@ class _DumTalkState extends State<DumTalk> {
                       color: Colors.black12,
                       width: 1,
                     ),
-                    borderRadius: BorderRadius.all(
+                    borderRadius: const BorderRadius.all(
                       Radius.circular(5),
                     ),
-                    boxShadow: [
+                    boxShadow: const [
                       BoxShadow(
                         color: Colors.black45,
                         spreadRadius: 5,
                         blurRadius: 7,
-                        offset: const Offset(0, 3),
+                        offset: Offset(0, 3),
                       ),
                     ],
                   ),
@@ -107,7 +106,7 @@ class _DumTalkState extends State<DumTalk> {
                         height: 300.0,
                       ),
                       //SizedBox(width: 25.0),
-                      Expanded(
+                      const Expanded(
                         child: Text(
                           "Girl: It's not real,the ceiling.It's just bewitched to look like the night sky.I read about it in Hogwarts A History \n \nAlbus Dumbledore: please stay calm......Now we are going to sorting homes for our new students... \n\n\n Please tell me the total number of students. \n",
                           style: TextStyle(
@@ -120,15 +119,14 @@ class _DumTalkState extends State<DumTalk> {
 
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          primary: Colors.black12,
-                          onPrimary: Colors.black,
-                          shape: CircleBorder(),
+                          foregroundColor: Colors.black, backgroundColor: Colors.black12,
+                          shape: const CircleBorder(),
                         ),
                         onPressed: () {
                           Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => SortPage()));
+                              builder: (context) => const SortPage()));
                         },
-                        child: Icon(
+                        child: const Icon(
                           Icons.navigate_next,
                           size: 35.0,
                         ),
@@ -137,7 +135,7 @@ class _DumTalkState extends State<DumTalk> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30.0,
               ),
             ],

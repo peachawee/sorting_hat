@@ -13,13 +13,12 @@ class Sorting{
   }
 
   String? getHouse(String name,var total) {
-    int avg = total/4;
+    double avg = total/4;
     var r = Random();
     x = r.nextInt(4)+1;
     if ( NewStudent.length > total) {
       return 'All new students have been successfully sorted houses!.';
     }
-    if( total%4 == 0 ){
 
         if (x == 1) {
           if( Gryffindor.length >= avg ){
@@ -115,7 +114,7 @@ class Sorting{
           }
         }
 
-    }
+    return null;
 
   }
 }

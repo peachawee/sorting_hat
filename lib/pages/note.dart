@@ -34,15 +34,15 @@ class _NotePageState extends State<NotePage> {
                       color: Colors.black12,
                       width: 1,
                     ),
-                    borderRadius: BorderRadius.all(
+                    borderRadius: const BorderRadius.all(
                       Radius.circular(5),
                     ),
-                    boxShadow: [
+                    boxShadow: const [
                       BoxShadow(
                         color: Colors.white30,
                         spreadRadius: 5,
                         blurRadius: 7,
-                        offset: const Offset(0, 3),
+                        offset: Offset(0, 3),
                       ),
                     ],
                   ),
@@ -56,8 +56,8 @@ class _NotePageState extends State<NotePage> {
                         ),
                       ),
                       //SizedBox(width: 25.0),
-                      SizedBox(width: 20.0),
-                      Expanded(
+                      const SizedBox(width: 20.0),
+                      const Expanded(
                         child: Text(
                           "Hogwarts..!!",
                           style: TextStyle(
@@ -73,15 +73,14 @@ class _NotePageState extends State<NotePage> {
               ),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.black12,
-                  onPrimary: Colors.black,
-                  shape: CircleBorder(),
+                  foregroundColor: Colors.black, backgroundColor: Colors.black12,
+                  shape: const CircleBorder(),
                 ),
                 onPressed: () {
                   Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => NoteTwo()));
+                      builder: (context) => const NoteTwo()));
                 },
-                child: Row(
+                child: const Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     Text(

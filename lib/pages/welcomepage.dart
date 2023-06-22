@@ -38,15 +38,15 @@ class _WelcomePageState extends State<WelcomePage> {
                       color: Colors.black12,
                       width: 1,
                     ),
-                    borderRadius: BorderRadius.all(
+                    borderRadius: const BorderRadius.all(
                       Radius.circular(5),
                     ),
-                    boxShadow: [
+                    boxShadow: const [
                       BoxShadow(
                         color: Colors.black45,
                         spreadRadius: 5,
                         blurRadius: 7,
-                        offset: const Offset(0, 3),
+                        offset: Offset(0, 3),
                       ),
                     ],
                   ),
@@ -57,7 +57,7 @@ class _WelcomePageState extends State<WelcomePage> {
                         height: 300.0,
                       ),
                       //SizedBox(width: 25.0),
-                      Expanded(
+                      const Expanded(
                         child: Text(
                           "Albus Dumbledore: Welcome!... Welcome! to another year at Hogwarts!...And most importantly, I'm glad that the little wizard and the little witch have come to study at Hogwarts. \n\n\n",
                           style: TextStyle(
@@ -71,15 +71,14 @@ class _WelcomePageState extends State<WelcomePage> {
 
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          primary: Colors.black12,
-                          onPrimary: Colors.black,
-                          shape: CircleBorder(),
+                          foregroundColor: Colors.black, backgroundColor: Colors.black12,
+                          shape: const CircleBorder(),
                         ),
                         onPressed: () {
                           Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => DumTalk()));
+                              builder: (context) => const DumTalk()));
                         },
-                        child: Icon(
+                        child: const Icon(
                           Icons.navigate_next,
                           size: 35.0,
                         ),
@@ -88,7 +87,7 @@ class _WelcomePageState extends State<WelcomePage> {
                   ),
                 ),
               ),
-              SizedBox(height: 30.0,),
+              const SizedBox(height: 30.0,),
             ],
 
           ),

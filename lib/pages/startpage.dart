@@ -1,7 +1,5 @@
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:audioplayers/audioplayers.dart';
 import 'package:sorting_hat/pages/mempage.dart';
 import 'package:sorting_hat/pages/sortingpage.dart';
 import 'package:sorting_hat/pages/welcomepage.dart';
@@ -27,45 +25,43 @@ class _StartPageState extends State<StartPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SizedBox(height: 15.0,),
+              const SizedBox(height: 15.0,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.black12,
-                        onPrimary: Colors.orange[600],
-                        shape: CircleBorder(),
+                        foregroundColor: Colors.orange[600], backgroundColor: Colors.black12,
+                        shape: const CircleBorder(),
                       ),
                       onPressed: (){
                         Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => MemPage()));
+                            builder: (context) => const MemPage()));
                       },
                       child: IconButton(
                         icon: Image.asset("assets/images/user.png",fit: BoxFit.fitHeight),
                         iconSize: 40.0,
                         onPressed: () {
                           Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => MemPage()));
+                              builder: (context) => const MemPage()));
                         },
                       ),
                     ),
 
                 ],
               ),
-              SizedBox(height: 15.0,),
+              const SizedBox(height: 15.0,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.black12,
-                        onPrimary: Colors.orange[600],
-                        shape: CircleBorder(),
+                        foregroundColor: Colors.orange[600], backgroundColor: Colors.black12,
+                        shape: const CircleBorder(),
                       ),
                       onPressed: (){
                         Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => StartPage()));
+                            builder: (context) => const StartPage()));
                       },
                       child: IconButton(
                         icon: Image.asset("assets/images/reset.png",fit: BoxFit.fitHeight),
@@ -92,7 +88,7 @@ class _StartPageState extends State<StartPage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  Text(
+                  const Text(
                       'Alohomora. . .',
                       style: TextStyle(
                         color: Colors.white,
@@ -102,15 +98,14 @@ class _StartPageState extends State<StartPage> {
                   
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.yellow,
-                      onPrimary: Colors.deepPurpleAccent,
-                      shape: CircleBorder(),
+                      foregroundColor: Colors.deepPurpleAccent, backgroundColor: Colors.yellow,
+                      shape: const CircleBorder(),
                     ),
                     onPressed: () {
                       Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => WelcomePage()));
+                          builder: (context) => const WelcomePage()));
                     },
-                    child: Icon(
+                    child: const Icon(
                       Icons.navigate_next,
                       size: 30.0,
                     ),

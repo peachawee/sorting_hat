@@ -1,7 +1,8 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:sorting_hat/pages/dumtalkpage.dart';
 import 'package:sorting_hat/pages/mempage.dart';
-import 'package:sorting_hat/pages/startpage.dart';
 import 'package:sorting_hat/sorting/checkhouse.dart';
 import 'package:sorting_hat/sorting/hat.dart';
 
@@ -38,24 +39,25 @@ class _SortPageState extends State<SortPage> {
 
   var name = '';
 
-Sorting sorting = new Sorting();
-CheckAdd checkadd = new CheckAdd();
+Sorting sorting = Sorting();
+CheckAdd checkadd = CheckAdd();
 
   void _handleClickEnterName(String name) {
     var house = sorting.getHouse(name, int.parse(num));
+      print(name);
     if( NewStudent.length >= int.parse(num) ) {
       print('All new students have been successfully sorted houses!.');
       showDialog(
         context: context,
         builder: (context) {
           Future.delayed(
-            Duration(seconds: 2),
+            const Duration(seconds: 2),
                 () {
               Navigator.of(context).pop(true);
             },
           );
 
-          return AlertDialog(
+          return const AlertDialog(
             title: Text('Complete!!!'),
             content: Text('All new students have been successfully sorted houses!.'),
           );
@@ -66,7 +68,7 @@ CheckAdd checkadd = new CheckAdd();
           context: context,
           builder: (context) {
             Future.delayed(
-              Duration(seconds: 2),
+              const Duration(seconds: 2),
                   () {
                 Navigator.of(context).pop(true);
               },
@@ -74,17 +76,17 @@ CheckAdd checkadd = new CheckAdd();
 
             return AlertDialog(
               title: Text(house),
-              content: Text('congratulations!!!'),
+              content: const Text('congratulations!!!'),
             );
           },
         );
       NewStudent.add(Student(done: true, name: name, house: house));
-      print("The child's name was " + name + "!.");
-      print("all "+ NewStudent.length.toString());
-      print("gryffindor "+ Gryffindor.length.toString());
-      print("slytherin "+ Slytherin.length.toString());
-      print("ravenclaw "+ Ravenclaw.length.toString());
-      print("hufflepuff "+ Hufflepuff.length.toString());
+      print("The child's name was $name!.");
+      print("all ${NewStudent.length}");
+      print("gryffindor ${Gryffindor.length}");
+      print("slytherin ${Slytherin.length}");
+      print("ravenclaw ${Ravenclaw.length}");
+      print("hufflepuff ${Hufflepuff.length}");
     } else if( house == null ){
       print('Please enter only number / enter your name again');
     }
@@ -104,7 +106,7 @@ CheckAdd checkadd = new CheckAdd();
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              Text('Name..',
+              const Text('Name..',
                   textAlign: TextAlign.left,
                   style: TextStyle(
                     fontSize: 20.0,
@@ -124,7 +126,7 @@ CheckAdd checkadd = new CheckAdd();
                   style: TextStyle(
                     color: Colors.orange[800],
                     fontWeight: FontWeight.bold,
-                    shadows: <Shadow>[
+                    shadows: const <Shadow>[
                       Shadow(
                         offset: Offset(15.0, 15.0),
                         blurRadius: 6.0,
@@ -142,9 +144,8 @@ CheckAdd checkadd = new CheckAdd();
               Material(
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.orange[800],
-                    onPrimary: Colors.black,
-                    minimumSize: Size(45.0, 45.0),
+                    foregroundColor: Colors.black, backgroundColor: Colors.orange[800],
+                    minimumSize: const Size(45.0, 45.0),
                   ),
                   onPressed: () {
                     setState(() {
@@ -153,11 +154,11 @@ CheckAdd checkadd = new CheckAdd();
                     _source.clear();
                     });
                   },
-                  child: Text('Sorting',
+                  child: const Text('Sorting',
                       style: TextStyle(fontWeight: FontWeight.bold)),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 100.0,
               ),
               Padding(
@@ -172,15 +173,15 @@ CheckAdd checkadd = new CheckAdd();
                       color: Colors.black12,
                       width: 1,
                     ),
-                    borderRadius: BorderRadius.all(
+                    borderRadius: const BorderRadius.all(
                       Radius.circular(5),
                     ),
-                    boxShadow: [
+                    boxShadow: const [
                       BoxShadow(
                         color: Colors.white30,
                         spreadRadius: 5,
                         blurRadius: 7,
-                        offset: const Offset(0, 3),
+                        offset: Offset(0, 3),
                       ),
                     ],
                   ),
@@ -194,8 +195,8 @@ CheckAdd checkadd = new CheckAdd();
                         ),
                       ),
                       //SizedBox(width: 25.0),
-                      SizedBox(width: 20.0),
-                      Expanded(
+                      const SizedBox(width: 20.0),
+                      const Expanded(
                         child: Text(
                           "Minerva McGonagall: Now when I call your name,you will come forth,I shall place the Sorting Hat on your head,and you will be sorted into your houses. \n\n\n Please enter your name..",
                           style: TextStyle(
@@ -211,15 +212,14 @@ CheckAdd checkadd = new CheckAdd();
               ),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.black12,
-                  onPrimary: Colors.black,
-                  shape: CircleBorder(),
+                  foregroundColor: Colors.black, backgroundColor: Colors.black12,
+                  shape: const CircleBorder(),
                 ),
                 onPressed: () {
                   Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => MemPage()));
+                      MaterialPageRoute(builder: (context) => const MemPage()));
                 },
-                child: Row(
+                child: const Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     Text(

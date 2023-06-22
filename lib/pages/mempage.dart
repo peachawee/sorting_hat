@@ -34,40 +34,38 @@ class _MemPageState extends State<MemPage> {
 
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.black12,
-                      onPrimary: Colors.black,
-                      shape: CircleBorder(),
+                      foregroundColor: Colors.black, backgroundColor: Colors.black12,
+                      shape: const CircleBorder(),
                     ),
                     onPressed: () {
                       Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => GryPage()));
+                          builder: (context) => const GryPage()));
                     },
                     child: IconButton(
                       icon: Image.asset("assets/images/logo1.png"),
                       iconSize: 150.0,
                       onPressed: () {
                         Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => GryPage()));
+                            builder: (context) => const GryPage()));
                       },
                     ),
                   ),
 
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.black12,
-                      onPrimary: Colors.black,
-                      shape: CircleBorder(),
+                      foregroundColor: Colors.black, backgroundColor: Colors.black12,
+                      shape: const CircleBorder(),
                     ),
                     onPressed: () {
                       Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => SlyPage()));
+                          builder: (context) => const SlyPage()));
                     },
                     child: IconButton(
                       icon: Image.asset("assets/images/logo2.png"),
                       iconSize: 150.0,
                       onPressed: () {
                         Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => SlyPage()));
+                            builder: (context) => const SlyPage()));
                       },
                     ),
                   ),
@@ -80,20 +78,19 @@ class _MemPageState extends State<MemPage> {
                 children: [
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.black12,
-                      onPrimary: Colors.black,
-                      shape: CircleBorder(),
+                      foregroundColor: Colors.black, backgroundColor: Colors.black12,
+                      shape: const CircleBorder(),
                     ),
                     onPressed: () {
                       Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => NewMemPage()));
+                          builder: (context) => const NewMemPage()));
                     },
                     child: IconButton(
                       icon: Image.asset("assets/images/logo0.png"),
                       iconSize: 180.0,
                       onPressed: () {
                         Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => NewMemPage()));
+                            builder: (context) => const NewMemPage()));
                       },
                     ),
                   ),
@@ -105,40 +102,38 @@ class _MemPageState extends State<MemPage> {
                 children: [
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.black12,
-                      onPrimary: Colors.black,
-                      shape: CircleBorder(),
+                      foregroundColor: Colors.black, backgroundColor: Colors.black12,
+                      shape: const CircleBorder(),
                     ),
                     onPressed: () {
                       Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => HufPage()));
+                          builder: (context) => const HufPage()));
                     },
                     child: IconButton(
                       icon: Image.asset("assets/images/logo4.png"),
                       iconSize: 150.0,
                       onPressed: () {
                         Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => HufPage()));
+                            builder: (context) => const HufPage()));
                       },
                     ),
                   ),
 
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.black12,
-                      onPrimary: Colors.black,
-                      shape: CircleBorder(),
+                      foregroundColor: Colors.black, backgroundColor: Colors.black12,
+                      shape: const CircleBorder(),
                     ),
                     onPressed: () {
                       Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => RavPage()));
+                          builder: (context) => const RavPage()));
                     },
                     child: IconButton(
                       icon: Image.asset("assets/images/logo3.png"),
                       iconSize: 150.0,
                       onPressed: () {
                         Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => RavPage()));
+                            builder: (context) => const RavPage()));
                       },
                     ),
                   ),
@@ -146,26 +141,25 @@ class _MemPageState extends State<MemPage> {
                 ],
               ),
 
-              SizedBox(height: 50.0,),
+              const SizedBox(height: 50.0,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.black12,
-                      onPrimary: Colors.black,
-                      shape: CircleBorder(),
+                      foregroundColor: Colors.black, backgroundColor: Colors.black12,
+                      shape: const CircleBorder(),
                     ),
                     onPressed: () {
                       Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => SortPage()));
+                          builder: (context) => const SortPage()));
                     },
-                    child: Icon(
+                    child: const Icon(
                       Icons.chevron_left,
                       size: 30.0,
                     ),
                   ),
-                  Expanded(
+                  const Expanded(
                     child: Text(
                       'Back...',
                       style: TextStyle(
@@ -177,20 +171,19 @@ class _MemPageState extends State<MemPage> {
                   ),
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          primary: Colors.black12,
-                          onPrimary: Colors.orange[600],
-                          shape: CircleBorder(),
+                          foregroundColor: Colors.orange[600], backgroundColor: Colors.black12,
+                          shape: const CircleBorder(),
                         ),
                         onPressed: (){
                           Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => StartPage()));
+                              builder: (context) => const StartPage()));
                         },
                         child: IconButton(
                           icon: Image.asset("assets/images/iconhome.png",fit: BoxFit.fitHeight),
                           iconSize: 80.0,
                           onPressed: () {
                             Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => StartPage()));
+                                builder: (context) => const StartPage()));
                           },
                         ),
                       ),

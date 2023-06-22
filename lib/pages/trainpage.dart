@@ -37,21 +37,21 @@ class _TrainPageState extends State<TrainPage> {
                       color: Colors.black12,
                       width: 1,
                     ),
-                    borderRadius: BorderRadius.all(
+                    borderRadius: const BorderRadius.all(
                       Radius.circular(5),
                     ),
-                    boxShadow: [
+                    boxShadow: const [
                       BoxShadow(
                         color: Colors.white30,
                         spreadRadius: 5,
                         blurRadius: 7,
-                        offset: const Offset(0, 3),
+                        offset: Offset(0, 3),
                       ),
                     ],
                   ),
                   child: Row(
                     children: [
-                      SizedBox(height: 50.0,),
+                      const SizedBox(height: 50.0,),
                       Padding(
                         padding: const EdgeInsets.all(10.0),
                         child: Image.asset(
@@ -60,8 +60,8 @@ class _TrainPageState extends State<TrainPage> {
                         ),
                       ),
                       //SizedBox(width: 25.0),
-                      SizedBox(width: 20.0),
-                      Expanded(
+                      const SizedBox(width: 20.0),
+                      const Expanded(
                         child: Text(
                           "Someone: Excuse me,excuse me. Excuse me sir.Can you tell me where i might find Platform 9 and 3/4? \n \nTrain staff: 9 and 3/4? Think you're being funny do you? \n \nSomeone: Muggles? \n \nAunt: Come on! Platform 9 and 3/4 this way...",
                           style: TextStyle(
@@ -75,7 +75,7 @@ class _TrainPageState extends State<TrainPage> {
                   ),
                 ),
               ),
-              SizedBox(height: 5.0,),
+              const SizedBox(height: 5.0,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
@@ -88,15 +88,14 @@ class _TrainPageState extends State<TrainPage> {
                 ),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.black12,
-                      onPrimary: Colors.black,
-                      shape: CircleBorder(),
+                      foregroundColor: Colors.black, backgroundColor: Colors.black12,
+                      shape: const CircleBorder(),
                     ),
                     onPressed: () {
                       Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => StartPage()));
+                          builder: (context) => const StartPage()));
                     },
-                    child: Icon(
+                    child: const Icon(
                       Icons.navigate_next,
                       size: 30.0,
                     ),

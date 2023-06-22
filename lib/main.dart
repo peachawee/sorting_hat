@@ -1,10 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sorting_hat/pages/dumtalkpage.dart';
-import 'package:sorting_hat/pages/mempage.dart';
 import 'package:sorting_hat/pages/note.dart';
-import 'package:sorting_hat/pages/sortingpage.dart';
-import 'package:sorting_hat/pages/startpage.dart';
-import 'package:sorting_hat/pages/trainpage.dart';
 
 void main() {
   runApp(const MyApp());

@@ -32,26 +32,26 @@ class _SlyPageState extends State<SlyPage> {
                     color: Colors.black12,
                     width: 1,
                   ),
-                  borderRadius: BorderRadius.all(
+                  borderRadius: const BorderRadius.all(
                     Radius.circular(5),
                   ),
-                  boxShadow: [
+                  boxShadow: const [
                     BoxShadow(
                       color: Colors.black45,
                       spreadRadius: 5,
                       blurRadius: 7,
-                      offset: const Offset(0, 3),
+                      offset: Offset(0, 3),
                     ),
                   ],
                 ),
                 child: Row(
                   children: [
-                    SizedBox(width: 30.0),
+                    const SizedBox(width: 30.0),
                     Image.asset(
                       'assets/images/logo2.png',
                       height: 80.0,
                     ),
-                    SizedBox(width: 25.0),
+                    const SizedBox(width: 25.0),
                     Expanded(
                       child: Text(
                         "Slytherin",
@@ -63,14 +63,14 @@ class _SlyPageState extends State<SlyPage> {
                       ),
                     ),
                     Text(
-                      "" + Slytherin.length.toString(),
+                      "${Slytherin.length}",
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 35.0,
                         color: Colors.green[700],
                       ),
                     ),
-                    Text(""+ Slytherin.length.toString(),style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18.0),),
+                    Text("${Slytherin.length}",style: const TextStyle(fontWeight: FontWeight.bold,fontSize: 18.0),),
                     IconButton(
                       icon: Image.asset("assets/images/user.png"),
                       iconSize: 50.0,
@@ -103,13 +103,13 @@ class _SlyPageState extends State<SlyPage> {
                                         width: 60.0,
                                         height: 60.0,
                                       ),
-                                      SizedBox(
+                                      const SizedBox(
                                         width: 10.0,
                                       ),
                                       Expanded(
                                         child: Text(
                                           '${Slytherin[i].name1}',
-                                          style: TextStyle(
+                                          style: const TextStyle(
                                             color: Colors.black,
                                             fontSize: 20.0,
                                           ),
@@ -117,7 +117,7 @@ class _SlyPageState extends State<SlyPage> {
                                       ),
                                       Text(
                                         '${Slytherin[i].house1}',
-                                        style: TextStyle(
+                                        style: const TextStyle(
                                           color: Colors.black,
                                           fontSize: 18.0,
                                         ),
@@ -133,26 +133,25 @@ class _SlyPageState extends State<SlyPage> {
                     }),
               ),
 
-              SizedBox(height: 5.0,),
+              const SizedBox(height: 5.0,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.black12,
-                      onPrimary: Colors.black,
-                      shape: CircleBorder(),
+                      foregroundColor: Colors.black, backgroundColor: Colors.black12,
+                      shape: const CircleBorder(),
                     ),
                     onPressed: () {
                       Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => MemPage()));
+                          builder: (context) => const MemPage()));
                     },
-                    child: Icon(
+                    child: const Icon(
                       Icons.chevron_left,
                       size: 30.0,
                     ),
                   ),
-                  Text(
+                  const Text(
                     'Back...',
                     style: TextStyle(
                         color: Colors.black,
